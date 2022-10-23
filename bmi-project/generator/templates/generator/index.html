@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <style>
+        .center {
+        width: 400px; /* Ширина элемента в пикселах */
+        padding: 20px; /* Поля вокруг текста */
+        margin: auto; /* Выравниваем по центру */
+        background: rgb(181, 36, 179); /* Цвет фона */
+   }
+    </style>
+</head>
+<body>
+<div class="center">
+    <h1>Кальулятор индекса массы тела</h1>
+    <form action="{% url 'results' %}">
+        <select name="sex"> 
+            <option value="Мужчина">Мужчина</option>
+            <option value="Женщина">Женщина</option>
+        </select>
+        <p><b>Возраст</b><br>
+        <input type="text" size="2" name="age">
+        <p><b>Ваш рост</b><br>
+            <input type="text" size="2" name="growth" required> Введите рост в сантиметрах*
+        <p><b>Ваш вес</b><br>
+            <input type="text" size="2" name="weight" required> Введите вес в киллограммах*
+            <p><input type="submit" value="Отправить" class="btn btn-warning"></p>
+    </form>
+</div>
+</body>
+</html>

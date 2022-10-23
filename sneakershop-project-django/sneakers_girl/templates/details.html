@@ -1,0 +1,74 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+
+    <title>Girl's sneakers</title>
+    <style>
+      .center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+      .colortext {   
+        width: 300px; /* Ширина элемента в пикселах */
+        height: 100px;
+        padding: 20px; /* Поля вокруг текста */
+        margin-left: auto;
+        margin-right: auto;
+        background: rgb(27, 16, 27); /* Цвет фона */
+        color: rgb(243, 233, 227); /* Цвет текста */
+    }
+      .container {
+          position: relative;
+          width: 100%;
+          max-width: 400px;
+      }
+
+      .container img {
+          width: 100%;
+          height: auto;
+      }
+
+      .container .btn {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          -ms-transform: translate(-50%, -50%);
+          background-color: rgb(252, 0, 0);
+          color: white;
+          font-size: 16px;
+          padding: 12px 24px;
+          border: none;
+          cursor: pointer;
+          border-radius: 5px;
+          text-align: center;
+      }
+
+      .container .btn:hover {
+          background-color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+    <h3><img src="{{ sneaker_girl.image.url }}" width="40%" height="300" class="center" style="width: 300px;"></h3>
+    <a href="{% url 'sneakers:home' %}"><button class="btn">Purchase</button></a> <!-- link for a home page -->
+    </div>
+    <h2 class="colortext" >{{ sneaker_girl.title }}</h2>
+        <h1 class="colortext">{{ sneaker_girl.price }}$ </h1>
+  
+      
+    
+    {% endblock %}
+  </body>
+</html>

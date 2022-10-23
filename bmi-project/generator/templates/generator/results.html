@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <style>
+        .center {
+        width: 500px; /* Ширина элемента в пикселах */
+        padding: 20px; /* Поля вокруг текста */
+        margin: auto; /* Выравниваем по центру */
+        background: rgb(181, 36, 179); /* Цвет фона */
+   }
+    </style>
+</head>
+<body>
+    <div class="center">
+        <h1>Индекс массы вашего тела: {{ bmi }}</h1>
+        <h2>{{ answer }}</h2>
+        <p><b>Ваш пол: {{ sex }}</b></p>
+        <p><strong>Ваш вес: {{ weight }}</strong></p>
+        <p><b>Ваш рост: {{ growth }}</b></p>
+        <a href="home"><button type="button" class="btn btn-warning">Назад</button></a>
+    </div>
+
+</body>
+</html>

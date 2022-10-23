@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+
+    <title>Hello, world!</title>
+  </head>
+  <style type="text/css">
+    #content {
+    width: 500px; /* Ширина слоя */
+    margin: 0 auto 50px; /* Выравнивание по центру */
+    background: rgb(210, 189, 125); /* Цвет фона */
+    padding: 10px; /* Поля вокруг текста */
+    }
+   </style>
+  <body>
+      <div id='content'>
+    <form method="GET">
+        <br>
+        <p><input name="url"></p>
+        <p><input type="submit" value="Подтвердить ссылку"></p>
+    </form>
+    <a href="{{ link }}"><button class="btn btn-success">Success</button></a>
+    </div>
+
+</body>
+</html>
+
